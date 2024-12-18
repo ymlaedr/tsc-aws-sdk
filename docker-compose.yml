@@ -1,0 +1,25 @@
+services:
+  node:
+    image: node:23.4.0-alpine3.20
+    environment:
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./workspace:/root/workspace
+    working_dir: /root/workspace
+  minio:
+    image: minio/minio:RELEASE.2024-11-07T00-52-20Z
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    environment:
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+
+volumes:
+  minio-data:
+    driver: local

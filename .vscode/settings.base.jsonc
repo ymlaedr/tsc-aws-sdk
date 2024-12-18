@@ -1,0 +1,42 @@
+{
+  // eslintとprettierrcの設定
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "on",
+  "editor.renderWhitespace": "boundary",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.insertSpaces": false
+  },
+  "eslint.format.enable": false,
+  "files.trimTrailingWhitespace": false,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.associations": {
+    "*Dockerfile": "dockerfile"
+  },
+  "remote.SSH.defaultForwardedPorts": [
+    { "remotePort": 9000, "localPort": 9000 },
+    { "remotePort": 9001, "localPort": 9001 }
+  ]
+}
